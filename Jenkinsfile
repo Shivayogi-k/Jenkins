@@ -1,10 +1,16 @@
 pipeline {
     agent any
       stages {
-          stage ('QA Stage') {
+          stage ('Build Stage') {
               steps {
-                    echo 'build stage running ${params.branch}'
-                    echo 'deployed to dev environment'
+                    echo 'build stage running '
+                    echo 'deployed to QA environment'
+              }
+          }
+          stage ('Test Stage') {
+              steps {
+                    echo 'Test stage running '
+                    echo 'deployed to QA environment'
               }
           }
       }
